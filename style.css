@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+/* 基本のスタイル */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+#header {
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 4%;
+  height: 170px;
+}
+
+.site-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+  transform: translateX(-500px);
+  
+}
+
+.site-title a {
+  color: #24292e;
+  text-decoration: none;
+  transition: opacity 0.3s ease; /*クリックした時速度*/
+  
+}
+
+
+.site-title a:hover { /*クリックした時色*/
+  opacity: 0.5; /*クリックした時透明になる*/
+  
+}
+
+
+
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #24292e;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+nav ul li a:hover {
+  opacity: 0.5;
+}
+
+nav ul li img.icon {
+  width: 30px;
+}
+
+#mainvisual {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.mainvisual-container {
+  width: 100%;
+  height: 100%;
+}
+
+.mainvisual-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #f4f4f4;
+}
+
+/* ノートパソコン向けのスタイル */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  #header {
+    max-width: 1200px;
+    padding: 0 2%;
+  }
+
+  .site-title {
+    font-size: 2rem;
+    transform: translateX(-300px);
+  }
+
+  nav {
+    margin-top: 5px;
+  }
+
+  #mainvisual {
+    height: 80vh;
+  }
+
+  .mainvisual-image {
+    object-fit: contain;
+  }
+}
+
+/* タブレット向けのスタイル */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px 4%;
+  }
+
+  .site-title {
+    font-size: 2.2rem;
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li img.icon {
+    width: 25px;
+  }
+
+  #mainvisual {
+    height: 60vh;
+  }
+
+  .mainvisual-image {
+    object-fit: contain;
+  }
+
+  footer {
+    padding: 15px 0;
+  }
+}
